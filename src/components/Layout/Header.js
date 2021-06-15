@@ -9,15 +9,13 @@ import UserButton from "../UI/Button/UserButton";
 //import { useState } from "react/cjs/react.production.min";
 
 const Header = (props) => {
-  const genderHeaderHandler = (gender) =>{
-    props.onGender(gender)
-  }
+  
   return (
     <div className={classes.header} >
       <div className={classes["search-header"]}>
         <KpopButton />
         <OpeningButton />
-        <JpopButton onGenderHeader = {genderHeaderHandler}/>
+        <JpopButton/>
         <VideogamesButton />
       </div>
       <div className={classes["user-header"]}>

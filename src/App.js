@@ -35,14 +35,12 @@ function App() {
     },
   ];
 
-  const genderHandler = (gender) =>{
-    console.log(gender)
-  }
+  
 
   return (
     <div>
       <section>
-        <Header onGender ={genderHandler}/>
+        <Header/>
       </section>
       <section>
        <MusicList music={musicList} />
