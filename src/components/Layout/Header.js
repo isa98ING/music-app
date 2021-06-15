@@ -9,24 +9,20 @@ import UserButton from "../UI/Button/UserButton";
 //import { useState } from "react/cjs/react.production.min";
 
 const Header = (props) => {
- // const [showMenu, setShowMenu] = useState(false);
-
-  const showMenuHandler = (event) => {
-    event.preventDefault();
-    console.log('pera')
-  };
-
+  const genderHeaderHandler = (gender) =>{
+    props.onGender(gender)
+  }
   return (
-    <div className={classes.header}>
+    <div className={classes.header} >
       <div className={classes["search-header"]}>
         <KpopButton />
         <OpeningButton />
-        <JpopButton />
+        <JpopButton onGenderHeader = {genderHeaderHandler}/>
         <VideogamesButton />
       </div>
       <div className={classes["user-header"]}>
         <UserButton className={classes["help-button"]} />
-        <UserButton className={classes["help-button"]} onclick={showMenuHandler} />
+        <UserButton className={classes["help-button"]}  />
         
       </div>
     </div>

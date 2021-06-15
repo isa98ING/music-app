@@ -15,6 +15,7 @@ const SearchButton = (props) => {
       return;
     }
     setButtonActive(true);
+    props.onFetch();
     console.log("I am activated");
   };
 
