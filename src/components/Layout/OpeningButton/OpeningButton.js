@@ -1,9 +1,9 @@
-import Button from "../../UI/Button/Button";
+import SearchButton from "../../UI/Button/SearchButton";
 import classes from './OpeningButton.module.css'
 
 const OpeningButton = () => {
   return (
-    <Button
+    <SearchButton
       key="openings"
       id="openings"
       name="Openings"

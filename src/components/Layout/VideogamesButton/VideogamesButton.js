@@ -1,9 +1,9 @@
 import classes from "./VideogamesButton.module.css";
-import Button from "../../UI/Button/Button";
+import SearchButton from "../../UI/Button/SearchButton";
 
 const VideogamesButton = () => {
   return (
-    <Button
+    <SearchButton
       key="videogames"
       id="kpop"
       name="Videogames"

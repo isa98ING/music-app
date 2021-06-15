@@ -38,3 +38,8 @@
       rgba(252, 166, 5, 1) 100%
     );
   }
+
+  .theme-menu{
+    position: relative;
+    display: flex;
+  }

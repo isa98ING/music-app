@@ -1,10 +1,10 @@
 import classes from "./KpopButton.module.css";
-import Button from "../../UI/Button/Button";
+import SearchButton from "../../UI/Button/SearchButton";
 
 const KpopButton = (props) => {
    
   return (
-    <Button
+    <SearchButton
       key="kpop"
       id="kpop"
       name="K-pop"
