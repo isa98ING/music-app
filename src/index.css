@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Lemonada&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Lemonada', cursive;
+  background-image: url('./assets/img/yellow\ pattern.jpg');
+  background-size: 100vh;  
+}
+
+body {
+  margin: 0;
+}
+
+

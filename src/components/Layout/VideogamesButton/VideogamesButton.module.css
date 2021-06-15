@@ -1,0 +1,20 @@
+/*videogames*/
+.videogames-button {
+    background: rgb(145, 233, 48);
+    background: linear-gradient(
+      0deg,
+      rgba(119, 185, 45, 1) 35%,
+      rgba(145, 233, 48, 1) 100%
+    );
+  }
+  
+  .videogames-button:hover,
+  .videogames-button:active {
+    background: rgb(145, 233, 48);
+    background: linear-gradient(
+      0deg,
+      rgba(145, 233, 48, 1) 35%,
+      rgba(119, 185, 45,1) 100%
+    );
+  }
+  

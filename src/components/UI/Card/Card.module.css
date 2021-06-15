@@ -1,0 +1,27 @@
+.card{ 
+   
+    width: 40%;
+    height: 3.5rem;
+    margin:1rem;
+    margin-left: 3.5rem;
+    background: #008C99;
+    border: 2px solid white;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+    overflow: hidden;
+}
+.inner-card{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    line-height: 15px;
+    margin:auto;
+    width: 90%;
+    height: 100%;
+    color: white;
+    background: #24aab6;
+    overflow: hidden;
+}
+.card-opened{
+    height: 10rem;
+}

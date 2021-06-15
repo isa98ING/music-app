@@ -1,0 +1,21 @@
+
+/*Jpop*/
+
+.jpop-button {
+    background: rgb(188, 147, 228);
+    background: linear-gradient(
+      0deg,
+      rgba(141, 70, 227, 1) 35%,
+      rgba(188, 147, 228, 1) 100%
+    );
+  }
+  
+  .jpop-button:hover,
+  .jpop-button:active {
+    background: rgb(188, 147, 228);
+    background: linear-gradient(
+      0deg,
+      rgba(188, 147, 228, 1) 35%,
+      rgba(141, 70, 227, 1) 100%
+    );
+  }
