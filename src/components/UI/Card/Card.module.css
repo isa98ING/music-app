@@ -1,10 +1,8 @@
 .card{ 
-   
     width: 40%;
     height: 3.5rem;
     margin:1rem;
     margin-left: 3.5rem;
-    background: #008C99;
     border: 2px solid white;
     border-radius: 12px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
@@ -19,9 +17,38 @@
     width: 90%;
     height: 100%;
     color: white;
-    background: #24aab6;
     overflow: hidden;
 }
 .card-opened{
     height: 10rem;
+}
+/*Kpop*/
+.isKpop{
+    background: #008C99;
+}
+.isInnerKpop{
+    background: #24aab6;
+}
+
+/*Jpop*/
+.isJpop{
+    background: rgb(141, 70, 227);
+}
+.isInnerJpop{
+    background: rgb(188, 147, 228);
+}
+/*Opening*/
+.isOpenings{
+    background: rgb(242, 5, 96);
+}
+.isInnerOpenings{
+    background: rgb(248, 101, 157);
+}
+
+/*Videogames*/
+.isVideogames{
+    background: rgb(119, 185, 45);
+}
+.isInnerVideogames{
+    background: rgb(136, 219, 47);
 }

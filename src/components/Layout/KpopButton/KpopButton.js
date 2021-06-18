@@ -3,7 +3,7 @@ import SearchButton from "../../UI/Button/SearchButton";
 
 const KpopButton = (props) => {
   const genderHandler = () =>{
-    console.log('KPOP')
+    props.onMessage('kpop');
   }
   return (
     <SearchButton

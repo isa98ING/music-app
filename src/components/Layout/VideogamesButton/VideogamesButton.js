@@ -1,9 +1,9 @@
 import classes from "./VideogamesButton.module.css";
 import SearchButton from "../../UI/Button/SearchButton";
 
-const VideogamesButton = () => {
+const VideogamesButton = (props) => {
   const genderHandler = () =>{
-    console.log('VIDEOGAMES')
+    props.onMessage('videogames');
   }
   return (
     <SearchButton

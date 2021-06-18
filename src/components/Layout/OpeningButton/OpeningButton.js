@@ -1,9 +1,9 @@
 import SearchButton from "../../UI/Button/SearchButton";
 import classes from './OpeningButton.module.css'
 
-const OpeningButton = () => {
+const OpeningButton = (props) => {
   const genderHandler = () =>{
-    console.log('OPENINGS')
+    props.onMessage('openings');
   }
   return (
     <SearchButton

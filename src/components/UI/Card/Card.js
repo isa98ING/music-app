@@ -1,13 +1,50 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import classes from "./Card.module.css";
 
 const Card = (props) => {
   const [cardClicked, setCardClicked] = useState(false);
-  
+
+  const [isKpop, setIsKpop] = useState(true);
+  const [isJpop, setIsJpop] = useState(false);
+  const [isOpenings, setIsOpenings] = useState(false);
+  const [isVideogames, setIsVideogames] = useState(false);
 
   let cardClasses = `${classes.card}  ${
-    cardClicked ? classes["card-opened"] : ""
-  }`;
+    cardClicked ? classes["card-opened"] : ""}
+    ${isJpop ? classes.isJpop : ""}
+    ${isKpop ? classes.isKpop : ""}
+    ${isOpenings ? classes.isOpenings : ""}
+    ${isVideogames ? classes.isVideogames : ""}
+  `;
+
+  let cardInnerClasses = `${classes["inner-card"]}
+    ${isJpop ? classes.isInnerJpop : ""}
+    ${isKpop ? classes.isInnerKpop : ""}
+    ${isOpenings ? classes.isInnerOpenings : ""}
+    ${isVideogames ? classes.isInnerVideogames : ""}`
+
+  useEffect(()=>{
+    if(props.genre === 'jpop'){
+      setIsJpop(true);
+    }else{
+      setIsJpop(false)
+    }
+    if(props.genre === 'kpop'){
+      setIsKpop(true);
+    }else{
+      setIsKpop(false);
+    }
+    if(props.genre === 'openings'){
+      setIsOpenings(true);
+    }else{
+      setIsOpenings(false);
+    }if(props.genre === 'videogames'){
+      setIsVideogames(true);
+    }else{
+      setIsVideogames(false);
+    }
+
+  })
 
   const openCardHandler = (event) => {
     event.preventDefault();
@@ -19,12 +56,11 @@ const Card = (props) => {
     setCardClicked(true);
     console.log("I am activated");
   };
+
   return (
     <React.Fragment>
       <div onClick={openCardHandler} className={cardClasses}>
-        <div className={classes["inner-card"]}>
-          {props.children}
-        </div>
+        <div className={cardInnerClasses}>{props.children}</div>
       </div>
     </React.Fragment>
   );

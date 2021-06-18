@@ -3,7 +3,7 @@ import classes from "./JpopButton.module.css";
 
 const JpopButton = (props) => {
  const genderHandler = () =>{
-   console.log('JPOP')
+   props.onMessage('jpop');
  }
   return (
     <SearchButton
