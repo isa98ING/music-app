@@ -1,17 +1,30 @@
+import React, { useState } from "react";
 import classes from "./KpopButton.module.css";
-import SearchButton from "../../UI/Button/SearchButton";
+import Button from "../../UI/Button/Button";
 
 const KpopButton = (props) => {
-  const genderHandler = () =>{
-    props.onMessage('kpop');
-  }
+  const [active, setActive] = useState(false);
+
+  const genderHandler = () => {
+    if (active === true) {
+      setActive(false);
+    } else {
+      props.onMessage("kpop");
+      setActive(true);
+    }
+  };
+
+  let buttonClasses = `${classes["kpop-button"]} ${
+    active ? classes["grow-button"] : ""
+  } `;
+  
   return (
-    <SearchButton
+    <Button
       key="kpop"
       id="kpop"
-      name="K-pop"
-      className={classes["kpop-button"]}
-      onFetch = {genderHandler}
+      name="K-Pop"
+      className={buttonClasses}
+      onFetch={genderHandler}
     />
   );
 };

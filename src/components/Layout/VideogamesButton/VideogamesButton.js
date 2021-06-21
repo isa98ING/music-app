@@ -1,18 +1,31 @@
+import React, { useState } from "react";
+
 import classes from "./VideogamesButton.module.css";
-import SearchButton from "../../UI/Button/SearchButton";
+import Button from "../../UI/Button/Button";
 
 const VideogamesButton = (props) => {
-  const genderHandler = () =>{
-    props.onMessage('videogames');
-  }
+  const [active, setActive] = useState(false);
+
+  const genderHandler = () => {
+    if (active === true) {
+      setActive(false);
+    } else {
+      props.onMessage("videogames");
+      setActive(true);
+    }
+  };
+
+  let buttonClasses = `${classes["videogames-button"]}
+  ${active ? classes["grow-button"] : ""}`;
+
   return (
-    <SearchButton
+    <Button
       key="videogames"
-      id="kpop"
+      id="videogames"
       name="Videogames"
-      className={classes["videogames-button"]}
-      onFetch = {genderHandler}
-    />
+      className={buttonClasses}
+      onFetch={genderHandler}
+    ></Button>
   );
 };
 

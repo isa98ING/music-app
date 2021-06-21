@@ -1,17 +1,28 @@
-import SearchButton from "../../UI/Button/SearchButton";
-import classes from './OpeningButton.module.css'
+import React,{useState} from 'react'
+import Button from "../../UI/Button/Button";
+import classes from "./OpeningButton.module.css";
 
 const OpeningButton = (props) => {
-  const genderHandler = () =>{
-    props.onMessage('openings');
-  }
+  const [active, setActive] = useState(false);
+
+  const genderHandler = () => {
+    if (active === true) {
+      setActive(false);
+    } else {
+      props.onMessage("openings");
+      setActive(true);
+    }
+  };
+  let buttonClasses = `${classes["opening-button"]}  
+  ${active ? classes["grow-button"] : ""}`;
+
   return (
-    <SearchButton
+    <Button
       key="openings"
       id="openings"
       name="Openings"
-      className={classes["opening-button"]}
-      onFetch = {genderHandler}
+      className={buttonClasses}
+      onFetch={genderHandler}
     />
   );
 };

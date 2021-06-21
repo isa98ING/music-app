@@ -44,11 +44,11 @@ const Card = (props) => {
       setIsVideogames(false);
     }
 
-  })
+  },[props.genre])
 
   const openCardHandler = (event) => {
     event.preventDefault();
-    if (cardClicked == true) {
+    if (cardClicked === true) {
       setCardClicked(false);
       console.log("I am desactivated");
       return;

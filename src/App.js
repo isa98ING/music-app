@@ -1,106 +1,117 @@
-import React, { useState } from "react";
+import React, { useState, useCallback, useEffect } from "react";
 import Header from "./components/Layout/Header";
 import MusicList from "./components/Music/MusicList";
+import qs from "qs";
 
 function App() {
-   //DUMMY MUSIC
-  const kMusicList = [
-    {
-      id: "1",
-      title: "KPOP",
-      album: "album_1",
-      author: "author_1",
-    },
-  ];
+  
+  const [music, setMusic] = useState([]);
+  const [genre, setGenre] = useState("kpop");
 
-  const jMusicList = [
-    {
-      id: "1",
-      title: "JPOP",
-      album: "album_1",
-      author: "author_1",
-    },
-  ];
-  const opMusicList = [
-    {
-      id: "1",
-      title: "OPENING",
-      album: "album_1",
-      author: "author_1",
-    },
-  ];
-  const vgamesMusicList = [
-    {
-      id: "1",
-      title: "VIDEOGAMES",
-      album: "album_1",
-      author: "author_1",
-    },
-  ];
+ // Access Token Request
+  const accessToken = useCallback(async () => {
+    const response = await fetch("https://accounts.spotify.com/api/token", {
+      method: "POST",
+      body: qs.stringify({
+        grant_type: "client_credentials",
+      }),
+      headers: {
+        "Content-Type": "application/x-www-form-urlencoded",
+        Authorization:
+          "Basic MjlkZDU0NzI3ZDAxNGE2YzhhZTA2NWIwNmNiNDdkY2E6MDExNGU5ODYxNjBiNDNlZWJkMTE1NGVmYTFkNjFjOWM=",
+      },
+    });
+    const data = await response.json();
+    let authToken = data["access_token"];
+    return authToken;
+  }, []);
 
-  const [music, setMusic] = useState(kMusicList);
-  const [genre, setGenre] = useState('kpop');
-/*
-  const kpopMusicList = useCallbaCK(async ()=> {
+  //UseEffect accessToken renovation
+  useEffect(() => {
+    accessToken();
+  }, [accessToken]);
+  
+  // Access to the music
+  const musicAPI =  useCallback(async(playlist_id) => {
+    let authToken = await accessToken();
     const response = await fetch(
-      "https://api.spotify.com/v1/playlists/37i9dQZF1DX9tPFwDMOaN1/tracks?market=ES&limit=8",
+      `https://api.spotify.com/v1/playlists/${playlist_id}/tracks?market=ES&limit=8`,
       {
         method: "GET",
         headers: {
           Accept: "application/json",
-          "Content-Type": "application/json", 
-          "access_token": "NgCXRK...MzYjw",
-          "token_type": "Bearer",
-          "scope": "user-read-private",
-          "expires_in": 3600,
-          "refresh_token": "NgAagA...Um_SHo"
-
+          "Content-Type": "application/json",
+          Authorization: "Bearer " + authToken,
         },
       }
     );
     const data = await response.json();
     const transformedMusic = data.items.map((musicData) => {
       return {
-        id: musicData.track.album.id,
+        id: musicData.track.id,
         title: musicData.track.name,
         album: musicData.track.album.name,
-        author: musicData.track.artists[0].name
+        author: musicData.track.artists[0].name,
       };
     });
     setMusic(transformedMusic);
-  },[])
-*/
-  const genderHandler = (message) => {
+  },[accessToken]);
+
+  // Kmusic Call
+  const kmusic = useCallback(async() =>{
+    let playlist_id = '3kwb1LyzCSsLLacppOJQc8'
+    await musicAPI(playlist_id);
+  },[]);
+
+  // JMusic Call
+  const jmusic = useCallback(async() =>{
+    let playlist_id = '5unSNynPOXbga41vLvl8xw'
+    await musicAPI(playlist_id);
+  },[]);
+
+  // Openings Call
+  const opMusic = useCallback(async() =>{
+    let playlist_id = '1YA5cPIfDy3L03bGnNiDM7'
+    await musicAPI(playlist_id);
+  },[]);
+
+  // Openings Call
+  const vgamesMusic = useCallback(async() =>{
+    let playlist_id = '37i9dQZF1DXdfOcg1fm0VG'
+    await musicAPI(playlist_id);
+  },[]);
+
+  // Genre Music Selector
+  const genreHandler = (message) => {
     if (message === "kpop") {
       console.log("KPOP IN APP");
-      //kpopMusicList()
-      setGenre('kpop');
-      setMusic(kMusicList);
+      setGenre("kpop");
+      kmusic();
     }
     if (message === "jpop") {
       console.log("JPOP IN APP");
-      setGenre('jpop');
-      setMusic(jMusicList);
+      setGenre("jpop");
+      jmusic();
     }
     if (message === "openings") {
       console.log("OPENINGS IN APP");
-      setGenre('openings');
-      setMusic(opMusicList);
+      setGenre("openings");
+      opMusic();
     }
     if (message === "videogames") {
       console.log("VIDEOJUEGOS IN APP");
-      setGenre('videogames');
-      setMusic(vgamesMusicList);
+      setGenre("videogames");
+      vgamesMusic();
     }
   };
 
   return (
     <div>
       <section>
-        <Header onGender={genderHandler} />
+        <Header onGenre={genreHandler} />
       </section>
       <section>
-        <MusicList music={music} genre = {genre} />
+        <MusicList music={music} genre={genre} />
       </section>
     </div>
   );
