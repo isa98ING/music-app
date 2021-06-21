@@ -1,20 +1,14 @@
-
-.music h2 {
-  padding: 0;
-  font-size: 1.1rem;
-  color: white;
+.title{
+  font-size: 22px;
 }
 
-.music h3 {
-  padding: 0;
-  color: #eccf77;
-  font-size: 1rem;
+.album{
+  font-size: 18px;
+  font-weight: 100;
+  margin:8px 0
 }
 
-.music p{
-  padding-bottom: 0.2;
-  margin: 0;
-  font-size: .8rem;
+.author{
+  font-size: 16px;
+  margin:6px 0
 }
-
-

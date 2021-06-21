@@ -7,6 +7,7 @@ function App() {
   
   const [music, setMusic] = useState([]);
   const [genre, setGenre] = useState("kpop");
+  const [error, setError] = useState(null)
 
  // Access Token Request
   const accessToken = useCallback(async () => {
@@ -34,52 +35,63 @@ function App() {
   // Access to the music
   const musicAPI =  useCallback(async(playlist_id) => {
     let authToken = await accessToken();
-    const response = await fetch(
-      `https://api.spotify.com/v1/playlists/${playlist_id}/tracks?market=ES&limit=8`,
-      {
-        method: "GET",
-        headers: {
-          Accept: "application/json",
-          "Content-Type": "application/json",
-          Authorization: "Bearer " + authToken,
-        },
+    setError(null);
+
+    try{
+      const response = await fetch(
+        `https://api.spotify.com/v1/playlists/${playlist_id}/tracks?market=ES&limit=8`,
+        {
+          method: "GET",
+          headers: {
+            Accept: "application/json",
+            "Content-Type": "application/json",
+            Authorization: "Bearer " + authToken,
+          },
+        }
+      );
+      if (!response.ok) {
+        throw new Error('Something went wrong!');
       }
-    );
-    const data = await response.json();
-    const transformedMusic = data.items.map((musicData) => {
-      return {
-        id: musicData.track.id,
-        title: musicData.track.name,
-        album: musicData.track.album.name,
-        author: musicData.track.artists[0].name,
-      };
-    });
-    setMusic(transformedMusic);
+      const data = await response.json();
+      const transformedMusic = data.items.map((musicData) => {
+        return {
+          id: musicData.track.id,
+          title: musicData.track.name,
+          album: musicData.track.album.name,
+          author: musicData.track.artists[0].name,
+        };
+      });
+      setMusic(transformedMusic);
+    }catch(error){
+      setError(error.message);
+
+    }
+   
   },[accessToken]);
 
   // Kmusic Call
   const kmusic = useCallback(async() =>{
     let playlist_id = '3kwb1LyzCSsLLacppOJQc8'
     await musicAPI(playlist_id);
-  },[]);
+  });
 
   // JMusic Call
   const jmusic = useCallback(async() =>{
     let playlist_id = '5unSNynPOXbga41vLvl8xw'
     await musicAPI(playlist_id);
-  },[]);
+  });
 
   // Openings Call
   const opMusic = useCallback(async() =>{
     let playlist_id = '1YA5cPIfDy3L03bGnNiDM7'
     await musicAPI(playlist_id);
-  },[]);
+  });
 
   // Openings Call
   const vgamesMusic = useCallback(async() =>{
     let playlist_id = '37i9dQZF1DXdfOcg1fm0VG'
     await musicAPI(playlist_id);
-  },[]);
+  });
 
   // Genre Music Selector
   const genreHandler = (message) => {
