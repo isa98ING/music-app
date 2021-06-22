@@ -1,6 +1,8 @@
 
 /*Opening*/
 .opening-button {
+  width: 3rem;
+
     background: rgb(248, 101, 157);
     background: linear-gradient(
       0deg,

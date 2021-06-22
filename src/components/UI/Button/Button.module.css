@@ -1,8 +1,6 @@
 .button {
-  padding: 1rem 1rem;
   font: inherit;
   height: 3rem;
-  width: 3rem;
   border-radius: 12px;
   margin-right: 1.5rem;
   border: 2px solid white;
@@ -15,5 +13,4 @@
 .button:focus {
   outline: none;
 }
-
 

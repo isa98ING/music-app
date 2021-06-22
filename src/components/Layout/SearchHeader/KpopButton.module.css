@@ -1,6 +1,7 @@
 /*Kpop*/
 .kpop-button {
-    background: rgb(50, 200, 214);
+  width: 3rem;
+  background: rgb(50, 200, 214);
     background: linear-gradient(
       0deg,
       rgba(0, 140, 153, 1) 35%,
@@ -16,12 +17,12 @@
       rgba(0, 140, 153, 1) 100%
     );
   }
-  
   .grow-button{
     padding:0;
     align-items: center;
     width: 12rem;
-  }
+}
+  
   
   
   

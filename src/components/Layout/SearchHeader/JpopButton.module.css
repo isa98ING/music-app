@@ -2,6 +2,7 @@
 /*Jpop*/
 
 .jpop-button {
+    width: 3rem;
     background: rgb(188, 147, 228);
     background: linear-gradient(
       0deg,

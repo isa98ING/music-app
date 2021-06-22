@@ -1,5 +1,6 @@
 /*videogames*/
 .videogames-button {
+  width: 3rem;
     background: rgb(145, 233, 48);
     background: linear-gradient(
       0deg,

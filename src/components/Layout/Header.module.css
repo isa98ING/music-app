@@ -12,35 +12,12 @@
 }
 
 .search-header {
+  display: flex;
   margin-left: 2rem;
 }
+
 .user-header {
   margin-right: 2rem;
 }
 
-  /*Help*/
-  .help-button {
-    background: rgb(246, 209, 12) ;
-    background: linear-gradient(
-      0deg,
-      rgba(252, 166, 5, 1) 35%,
-      rgba(246, 209, 12, 1) 100%
-    );
-  }
-  
-  
-  .help-button:hover,
-  .help-button:active {
-    background:  rgb(156, 240, 62);
-    background: linear-gradient(
-      0deg,
-      rgba(246, 209, 12, 1) 35%,
-      rgba(252, 166, 5, 1) 100%
-    );
-  }
-
-  .theme-menu{
-    position: relative;
-    display: flex;
-  }
   

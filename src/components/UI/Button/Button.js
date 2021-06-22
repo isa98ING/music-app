@@ -10,11 +10,11 @@ const Button = (props) => {
   const fetchButton = (event) => {
     event.preventDefault();
     if (buttonActive === true) {
+      console.log('desactived')
       setButtonActive(false);
-      console.log("I am desactivated");
     } else {
+      console.log('actived')
       setButtonActive(true);
-      console.log("I am activated");
     }
     props.onFetch();
   };
@@ -26,7 +26,7 @@ const Button = (props) => {
         className={buttonClasses}
         onClick={fetchButton}
       >
-        {buttonActive && props.name} {props.children}
+        { props.children}
       </button>
     </React.Fragment>
   );
