@@ -29,8 +29,10 @@ function App() {
 
   //UseEffect accessToken renovation
   useEffect(() => {
-    accessToken();
-  }, [accessToken]);
+    setTimeout(() => {
+      accessToken();
+    }, 3000);
+  }, []);
 
   // Access to the music
   const musicAPI = useCallback(

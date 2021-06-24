@@ -9,6 +9,7 @@
   justify-content: space-between;
   background: rgb(255, 255, 255, 0.5);
   padding: 0 2rem;
+  overflow: visible;
 }
 
 .search-header {
@@ -17,7 +18,7 @@
 }
 
 .user-header {
-  margin-right: 2rem;
+  display: flex;
+  margin-right: 4rem;
 }
 
-  

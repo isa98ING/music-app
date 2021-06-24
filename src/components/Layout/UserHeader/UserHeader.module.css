@@ -1,27 +1,37 @@
 /*Help*/
-.help-button {
-    width: 3rem;
-    background: rgb(246, 209, 12) ;
-    background: linear-gradient(
-      0deg,
-      rgba(252, 166, 5, 1) 35%,
-      rgba(246, 209, 12, 1) 100%
-    );
-  }
-  
-  
-  .help-button:hover,
-  .help-button:active {
-    background:  rgb(156, 240, 62);
-    background: linear-gradient(
-      0deg,
-      rgba(246, 209, 12, 1) 35%,
-      rgba(252, 166, 5, 1) 100%
-    );
-  }
 
-  .theme-menu{
-    position: relative;
-    display: flex;
-  }
-  
+.help {
+  position: absolute;
+  top: 12.5px;
+}
+.help-button {
+  width: 3rem;
+  background: rgb(246, 209, 12);
+  background: linear-gradient(
+    0deg,
+    rgba(252, 166, 5, 1) 35%,
+    rgba(246, 209, 12, 1) 100%
+  );
+}
+.help-button:hover,
+.help-button:active {
+  background: rgb(156, 240, 62);
+  background: linear-gradient(
+    0deg,
+    rgba(246, 209, 12, 1) 35%,
+    rgba(252, 166, 5, 1) 100%
+  );
+}
+
+.theme-menu {
+  position: relative;
+  top: 7.2rem;
+  right: -2rem;
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+}
+
+.theme-menu li{
+  margin-bottom: 1rem;
+}

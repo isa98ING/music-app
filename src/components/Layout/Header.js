@@ -9,14 +9,14 @@ const Header = (props) => {
     props.onGenre(genre)
   }
   return (
-    <div className={classes.header}>
+    <nav className={classes.header}>
       <div className={classes["search-header"]}>
         <SearchHeader onSent = {genreHandler}/>
       </div>
       <div className = {classes['user-header']}>
         <UserHeader/>
       </div>
-    </div>
+    </nav>
   );
 };
 

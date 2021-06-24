@@ -1,19 +1,30 @@
-import classes from './UserHeader.module.css';
-import Button from '../../UI/Button/Button';
+import React, { useState } from "react";
+import classes from "./UserHeader.module.css";
+import Button from "../../UI/Button/Button";
 
 const UserHeader = (props) => {
+  const [open, setOpen] = useState(false);
 
-    const helpHandler = () =>{
-        console.log('help')
+  const helpHandler = () => {
+    console.log("help");
+  };
+  const themeHandler = () => {
+    if (open) {
+      setOpen(false);
+    } else {
+      setOpen(true);
     }
-    const themeHandler = () =>{
-        console.log('theme')
-    }
+  };
+
   return (
-    <div className={classes["user-header"]}>
-      <Button className={classes["help-button"]} onFetch={helpHandler} />
+    <React.Fragment>
+      <Button
+        className={`${classes.help} ${classes["help-button"]}`}
+        onFetch={helpHandler}
+      />
+
       <Button className={classes["help-button"]} onFetch={themeHandler} />
-    </div>
+    </React.Fragment>
   );
 };
 
