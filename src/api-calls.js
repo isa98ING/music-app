@@ -18,6 +18,7 @@ export const authorization = async () => {
   return authToken;
 };
 
+// Playlist Tracks Request
 export const api_Music = async (token, playlist_id) => {
   const response = await fetch(
     `https://api.spotify.com/v1/playlists/${playlist_id}/tracks?market=ES&limit=8`,
