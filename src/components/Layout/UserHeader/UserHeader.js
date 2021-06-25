@@ -8,22 +8,34 @@ const UserHeader = (props) => {
   const helpHandler = () => {
     console.log("help");
   };
-  const themeHandler = () => {
-    if (open) {
+  const openMenuHandler = () =>{
+    if(open){
       setOpen(false);
-    } else {
+    }else{
       setOpen(true);
     }
-  };
+  }
 
   return (
     <React.Fragment>
-      <Button
-        className={`${classes.help} ${classes["help-button"]}`}
-        onFetch={helpHandler}
-      />
-
-      <Button className={classes["help-button"]} onFetch={themeHandler} />
+      <div className = {classes['help-menu']}>
+        <Button className={classes["help-button"]} onFetch={helpHandler} />
+        <Button className={classes["help-button"]} onFetch={openMenuHandler} />
+      </div>
+    
+     {open && <div className={classes["theme-menu"]}>
+        <ul>
+          <li>
+            <Button className={classes["help-button"]} onFetch={helpHandler} />
+          </li>
+          <li>
+            <Button className={classes["help-button"]} onFetch={helpHandler}/>
+          </li>
+          <li>
+            <Button className={classes["help-button"]} onFetch={helpHandler}/>
+          </li>
+        </ul>
+      </div>}
     </React.Fragment>
   );
 };

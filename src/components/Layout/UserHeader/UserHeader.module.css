@@ -1,10 +1,11 @@
-/*Help*/
-
-.help {
-  position: absolute;
-  top: 12.5px;
+/* Help Menu */
+.help-menu {
+  display: flex;
+  position: relative;
 }
+/*Help Button*/
 .help-button {
+  display: block;
   width: 3rem;
   background: rgb(246, 209, 12);
   background: linear-gradient(
@@ -22,16 +23,28 @@
     rgba(252, 166, 5, 1) 100%
   );
 }
-
+/* Slide Menu */
 .theme-menu {
-  position: relative;
-  top: 7.2rem;
-  right: -2rem;
+  position: absolute;
+  top: 4rem;
+  right: 6rem;
   display: flex;
   flex-direction: column;
-  list-style: none;
 }
 
-.theme-menu li{
+.theme-menu li {
   margin-bottom: 1rem;
+  list-style: none;
+  animation: slide-down 300ms ease-out forwards;
+}
+
+@keyframes slide-down {
+  from {
+    opacity: 0;
+    transform: translateY(-3rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
