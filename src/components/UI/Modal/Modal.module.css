@@ -21,11 +21,12 @@
   animation: slide-down 300ms ease-out forwards;
 }
 
-.content{
+.content {
   justify-content: center;
   padding-right: 4.5rem;
   margin: 2rem;
   line-height: 25px;
+  font-size: .8rem;
 }
 
 .button {
@@ -36,6 +37,7 @@
   padding: 0.2rem 2rem;
   border-radius: 25px;
   margin-left: 1rem;
+  font-size: .8rem;
 }
 
 .button:hover,

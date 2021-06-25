@@ -11,6 +11,7 @@ const ModalOverlay = (props) => {
   return (
     <div className={classes.modal}>
       <div className={classes.content}>
+        <h2>Ups! There is a problem...</h2>
         {props.children}
         </div>
       <button

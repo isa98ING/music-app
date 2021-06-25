@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Header from "./components/Layout/Header";
 import MusicList from "./components/Music/MusicList";
 import Modal from "./components/UI/Modal/Modal";
@@ -67,6 +67,7 @@ function App() {
     }
   };
 
+  //Modal Handler
   const hideModalHandler = () => {
     setShowModal(false);
   };
