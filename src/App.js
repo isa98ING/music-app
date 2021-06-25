@@ -41,7 +41,7 @@ function App() {
     await music_call(playlist_id);
   };
 
-  // Openings Call
+  // Videogames Call
   const vgamesMusic = async () => {
     let playlist_id = "37i9dQZF1DXdfOcg1fm0VG";
     await music_call(playlist_id);
