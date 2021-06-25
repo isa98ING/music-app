@@ -4,19 +4,26 @@ import classesKpop from "./KpopButton.module.css";
 import classesJpop from "./JpopButton.module.css";
 import classesOpening from "./OpeningButton.module.css";
 import classesVgames from "./VideogamesButton.module.css";
-//import MusicContext from '../../../MusicContext';
 import Button from "../../UI/Button/Button";
 
 const SearchHeader = (props) => {
-  const [activeKpop, setActiveKpop]=useState(false);
-  const [activeJpop, setActiveJpop]=useState(false);
-  const [activeOpenings, setActiveOpenings]=useState(false);
-  const [activeVideogames, setActiveVideogames]=useState(false);
+  const [activeKpop, setActiveKpop] = useState(false);
+  const [activeJpop, setActiveJpop] = useState(false);
+  const [activeOpenings, setActiveOpenings] = useState(false);
+  const [activeVideogames, setActiveVideogames] = useState(false);
 
-  let k_classes = `${classesKpop["kpop-button"]} ${activeKpop ? classesKpop["grow-button"] : ""}`;
-  let j_classes = `${classesJpop["jpop-button"]} ${activeJpop ? classesJpop["grow-button"]: ""} `;
-  let op_classes = `${classesOpening["opening-button"]} ${activeOpenings ? classesOpening["grow-button"] : ""}`;
-  let vg_classes = `${classesVgames["videogames-button"]} ${activeVideogames ? classesVgames["grow-button"] : ""}`;
+  let k_classes = `${classesKpop["kpop-button"]} ${
+    activeKpop ? classesKpop["grow-button"] : ""
+  }`;
+  let j_classes = `${classesJpop["jpop-button"]} ${
+    activeJpop ? classesJpop["grow-button"] : ""
+  } `;
+  let op_classes = `${classesOpening["opening-button"]} ${
+    activeOpenings ? classesOpening["grow-button"] : ""
+  }`;
+  let vg_classes = `${classesVgames["videogames-button"]} ${
+    activeVideogames ? classesVgames["grow-button"] : ""
+  }`;
 
   const genreHandler = (genre) => {
     props.onSent(genre);
@@ -34,7 +41,7 @@ const SearchHeader = (props) => {
         setActiveOpenings(false);
         setActiveVideogames(false);
         break;
-       
+
       case "openings":
         setActiveKpop(false);
         setActiveJpop(false);
@@ -48,6 +55,8 @@ const SearchHeader = (props) => {
         setActiveOpenings(false);
         setActiveVideogames(true);
         break;
+       default:
+         break;
     }
   };
 
