@@ -10,13 +10,7 @@ function App() {
   const [showModal, setShowModal] = useState(false);
   const [error, setError] = useState(null);
 
-  //UseEffect accessToken renovation
-  useEffect(() => {
-    setTimeout(() => {
-      authorization();
-    }, 1200);
-  }, []);
-
+ 
   //  Api music call
   let music_call = async (playlist_id) => {
     let token = await authorization();
