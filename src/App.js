@@ -10,7 +10,6 @@ function App() {
   const [showModal, setShowModal] = useState(false);
   const [error, setError] = useState(null);
 
- 
   //  Api music call
   let music_call = async (playlist_id) => {
     let token = await authorization();
