@@ -25,25 +25,25 @@ function App() {
   // Kmusic Call
   const kmusic = async () => {
     setError(null);
-    let playlist_id = "3kwb1LyzCSsLLacppOJQc8";
+    let playlist_id = `${process.env.REACT_APP_API_PLAYLIST_ID_KPOP}`;
     await music_call(playlist_id);
   };
 
   // JMusic Call
   const jmusic = async () => {
-    let playlist_id = "5unSNynPOXbga41vLvl8xw";
+    let playlist_id = `${process.env.REACT_APP_API_PLAYLIST_ID_JPOP}`;
     await music_call(playlist_id);
   };
 
   // Openings Call
   const opMusic = async () => {
-    let playlist_id = "1YA5cPIfDy3L03bGnNiDM7";
+    let playlist_id = `${process.env.REACT_APP_API_PLAYLIST_ID_OPENING}`;
     await music_call(playlist_id);
   };
 
   // Videogames Call
   const vgamesMusic = async () => {
-    let playlist_id = "37i9dQZF1DXdfOcg1fm0VG";
+    let playlist_id = `${process.env.REACT_APP_API_PLAYLIST_ID_VIDEOGAMES}`;
     await music_call(playlist_id);
   };
 

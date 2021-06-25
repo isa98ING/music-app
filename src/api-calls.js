@@ -10,7 +10,7 @@ export const authorization = async () => {
     headers: {
       "Content-Type": "application/x-www-form-urlencoded",
       Authorization:
-        "Basic MjlkZDU0NzI3ZDAxNGE2YzhhZTA2NWIwNmNiNDdkY2E6MDExNGU5ODYxNjBiNDNlZWJkMTE1NGVmYTFkNjFjOWM=",
+        `Basic ${process.env.REACT_APP_ACCESS_TOKEN}`,
     },
   });
   const data = await response.json();
