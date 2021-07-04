@@ -32,23 +32,23 @@
 
 /*Jpop*/
 .isJpop{
-    background: rgb(141, 70, 227);
+    background: var(--jpop-color-dark);
 }
 .isInnerJpop{
-    background: rgb(188, 147, 228);
+    background: var(--jpop-color-light);
 }
 /*Opening*/
 .isOpenings{
-    background: rgb(242, 5, 96);
+    background: var(--opening-color-dark);
 }
 .isInnerOpenings{
-    background: rgb(248, 101, 157);
+    background: var(--opening-color-light);
 }
 
 /*Videogames*/
 .isVideogames{
-    background: rgb(119, 185, 45);
+    background: var(--videogames-color-dark);
 }
 .isInnerVideogames{
-    background: rgb(136, 219, 47);
+    background: var(--videogames-color-light);
 }

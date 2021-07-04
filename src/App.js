@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import classes from './App.module.css';
+
 import Header from "./components/Layout/Header";
 import MusicList from "./components/Music/MusicList";
 import Modal from "./components/UI/Modal/Modal";
@@ -31,18 +33,22 @@ function App() {
 
   // JMusic Call
   const jmusic = async () => {
+    setError(null);
+    console.log(process.env.REACT_APP_API_PLAYLIST_ID_JPOP)
     let playlist_id = `${process.env.REACT_APP_API_PLAYLIST_ID_JPOP}`;
     await music_call(playlist_id);
   };
 
   // Openings Call
   const opMusic = async () => {
+    setError(null);
     let playlist_id = `${process.env.REACT_APP_API_PLAYLIST_ID_OPENING}`;
     await music_call(playlist_id);
   };
 
   // Videogames Call
   const vgamesMusic = async () => {
+    setError(null);
     let playlist_id = `${process.env.REACT_APP_API_PLAYLIST_ID_VIDEOGAMES}`;
     await music_call(playlist_id);
   };
@@ -66,17 +72,14 @@ function App() {
       await vgamesMusic();
     }
   };
-
   //Modal Handler
   const hideModalHandler = () => {
     setShowModal(false);
   };
 
   return (
-    <div>
-      <section>
-        <Header onGenre={genreHandler} />
-      </section>
+    <div className = {classes.background} >
+      <Header onGenre={genreHandler} />
       <section>
         {!error && <MusicList music={music} genre={genre} />}
         {showModal && <Modal onClose={hideModalHandler}>{error}</Modal>}

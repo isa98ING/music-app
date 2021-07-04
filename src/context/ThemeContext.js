@@ -1,8 +1,4 @@
 import React, { useState , useLayoutEffect} from 'react';
-import lightBackgroud from './../assets/img/light.jpg';
-import colorfulBackground from './../assets/img/colorful.jpg';
-import nekoBackground from './..//assets/img/neko.jpg';
-import darkBackground from './../assets/img/dark.jpg';
 
 export const ThemeContext = React.createContext({
     theme: "",
@@ -18,7 +14,6 @@ export const ThemeProvider = (props) => {
         if (theme === 'colorful') {
             applyTheme(colorfulTheme);
         }
-
         if (theme === 'neko') {
             applyTheme(nekoTheme);
         }
@@ -49,24 +44,40 @@ export const ThemeProvider = (props) => {
 }
 
 const colorfulTheme = [
-    /*"--background-image:url('./assets/img/colorful.jpg')",*/
+    "--background-image:url('./assets/img/colorful.jpg')",
     "--background-color:orchid",
     "--kpop-color-light:rgba(50, 200, 214, 1)",
     "--kpop-color-dark:rgba(0, 140, 153, 1)",
+    "--jpop-color-dark:rgba(141, 70, 227, 1)",
+    "--jpop-color-light:rgba(188, 147, 228, 1)",
+    "--opening-color-light:rgba(248, 101, 157, 1)",
+    "--opening-color-dark:rgba(242, 5, 96, 1)",
+    "--videogames-color-light:rgba(145, 233, 48, 1)",
+    "--videogames-color-dark: rgba(119, 185, 45, 1)"
 ];
 
 const nekoTheme = [
-    /*"--background-image:url('./assets/img/neko.jpg')",*/
-    "--background-color:royalblue",
+    "--background-image:url('./assets/img/neko.jpg')",
     "--kpop-color-light:rgba(205, 163, 252, 1)",
     "--kpop-color-dark:rgba(163, 91, 241, 1)",
+    "--jpop-color-light:rgba(159, 196, 244, 1)",
+    "--jpop-color-dark:rgba(93, 155, 235, 1)",
+    "--opening-color-light:rgba(255, 168, 168, 1)",
+    "--opening-color-dark:rgba(255, 119, 119, 1)",
+    "--videogames-color-light:rgba(133, 204, 198, 1)",
+    "--videogames-color-dark: rgba(88, 176, 168, 1)",
 ];
 
 const lightTheme = [
-    /*"--background-image:url('./assets/img/light.jpg')",*/
-    "--background-color:palegreen",
+    "--background-image:url('./assets/img/light.jpg')",
     "--kpop-color-light:rgba(101, 192, 193, 1)",
     "--kpop-color-dark:rgba(31, 174, 174, 1)",
+    "--jpop-color-light:rgba(254, 182, 185, 1)",
+    "--jpop-color-dark:rgba(253, 107, 114, 1)",
+    "--opening-color-light:rgba(251, 203, 165, 1)",
+    "--opening-color-dark:rgba(252,152, 73, 1)",
+    "--videogames-color-light:rgba(180, 206, 151, 1)",
+    "--videogames-color-dark: rgba(115, 184, 38, 1)",
 ];
 
 const darkTheme = [
@@ -74,6 +85,10 @@ const darkTheme = [
     "--background-color:rebeccapurple",
     "--kpop-color-light:rgba(159, 124, 204, 1)",
     "--kpop-color-dark:rgba(90, 19, 176, 1)",
-
-    
+    "--opening-color-light:rgba(98, 81, 209, 1)",
+    "--opening-color-dark:rgba(50, 32, 167, 1)",
+    "--jpop-color-light:rgba(187, 199, 114, 1)",
+    "--jpop-color-dark:rgba(140, 153, 59, 1)",
+    "--videogames-color-light:rgba(198, 79, 157, 1)",
+    "--videogames-color-dark: rgba(151, 23, 115, 1)"
 ];
