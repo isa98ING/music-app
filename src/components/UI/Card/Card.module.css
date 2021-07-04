@@ -24,10 +24,10 @@
 }
 /*Kpop*/
 .isKpop{
-    background: #008C99;
+    background: var(--kpop-color-dark);
 }
 .isInnerKpop{
-    background: #24aab6;
+    background: var(--kpop-color-light);
 }
 
 /*Jpop*/

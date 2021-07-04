@@ -1,4 +1,8 @@
 import React, { useState , useLayoutEffect} from 'react';
+import lightBackgroud from './../assets/img/light.jpg';
+import colorfulBackground from './../assets/img/colorful.jpg';
+import nekoBackground from './..//assets/img/neko.jpg';
+import darkBackground from './../assets/img/dark.jpg';
 
 export const ThemeContext = React.createContext({
     theme: "",
@@ -54,22 +58,22 @@ const colorfulTheme = [
 const nekoTheme = [
     /*"--background-image:url('./assets/img/neko.jpg')",*/
     "--background-color:royalblue",
-    "--kpop-color-light:rgba(205, 163, 25, 1)",
-    "--kpop-color-dark:rgba(0, 140, 153, 1)",
+    "--kpop-color-light:rgba(205, 163, 252, 1)",
+    "--kpop-color-dark:rgba(163, 91, 241, 1)",
 ];
 
 const lightTheme = [
     /*"--background-image:url('./assets/img/light.jpg')",*/
     "--background-color:palegreen",
-    "--kpop-color-light:rgba(50, 200, 214, 1)",
-    "--kpop-color-dark:rgba(0, 140, 153, 1)",
+    "--kpop-color-light:rgba(101, 192, 193, 1)",
+    "--kpop-color-dark:rgba(31, 174, 174, 1)",
 ];
 
 const darkTheme = [
     /*"--background-image:url('./assets/img/dark.jpg')",*/
     "--background-color:rebeccapurple",
-    "--kpop-color-light:rgba(50, 200, 214, 1)",
-    "--kpop-color-dark:rgba(0, 140, 153, 1)",
+    "--kpop-color-light:rgba(159, 124, 204, 1)",
+    "--kpop-color-dark:rgba(90, 19, 176, 1)",
 
     
 ];

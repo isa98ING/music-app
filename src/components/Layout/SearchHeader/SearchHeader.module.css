@@ -23,11 +23,11 @@
   /*Kpop*/
 .kpop-button {
     width: 3rem;
-    background: rgb(50, 200, 214);
+    background: var(--kpop-color-light);
       background: linear-gradient(
         0deg,
-        rgba(0, 140, 153, 1) 35%,
-        rgba(50, 200, 214, 1) 100%
+        var(--kpop-color-dark) 35%,
+        var(--kpop-color-light) 100%
       );
     }
     
@@ -35,8 +35,8 @@
     .kpop-button:active {
       background: linear-gradient(
         0deg,
-        rgba(50, 200, 214, 1) 35%,
-        rgba(0, 140, 153, 1) 100%
+        var(--kpop-color-light) 35%,
+        var(--kpop-color-dark) 100%
       );
     }
 
