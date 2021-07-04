@@ -1,9 +1,6 @@
 import React, { useState } from "react";
 
-import classesKpop from "./KpopButton.module.css";
-import classesJpop from "./JpopButton.module.css";
-import classesOpening from "./OpeningButton.module.css";
-import classesVgames from "./VideogamesButton.module.css";
+import classes from './SearchHeader.module.css';
 import Button from "../../UI/Button/Button";
 
 const SearchHeader = (props) => {
@@ -12,17 +9,17 @@ const SearchHeader = (props) => {
   const [activeOpenings, setActiveOpenings] = useState(false);
   const [activeVideogames, setActiveVideogames] = useState(false);
 
-  let k_classes = `${classesKpop["kpop-button"]} ${
-    activeKpop ? classesKpop["grow-button"] : ""
+  let k_classes = `${classes["kpop-button"]} ${
+    activeKpop ? classes["grow-button"] : ""
   }`;
-  let j_classes = `${classesJpop["jpop-button"]} ${
-    activeJpop ? classesJpop["grow-button"] : ""
+  let j_classes = `${classes["jpop-button"]} ${
+    activeJpop ? classes["grow-button"] : ""
   } `;
-  let op_classes = `${classesOpening["opening-button"]} ${
-    activeOpenings ? classesOpening["grow-button"] : ""
+  let op_classes = `${classes["opening-button"]} ${
+    activeOpenings ? classes["grow-button"] : ""
   }`;
-  let vg_classes = `${classesVgames["videogames-button"]} ${
-    activeVideogames ? classesVgames["grow-button"] : ""
+  let vg_classes = `${classes["videogames-button"]} ${
+    activeVideogames ? classes["grow-button"] : ""
   }`;
 
   const genreHandler = (genre) => {

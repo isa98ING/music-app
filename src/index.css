@@ -6,12 +6,17 @@
 
 html {
   font-family: 'Lemonada', cursive;
-  background-image: url('./assets/img/yellow\ pattern.jpg');
-  background-size: 100vh;  
 }
 
 body {
   margin: 0;
 }
 
+:root{
+  --border: 2px solid white;
+  --border-radius: 12px;
+  --background-color:orchid;
+  --kpop-color-light:rgba(50, 200, 214, 1);
+  --kpop-color-dark:rgba(0, 140, 153, 1);
+}
 

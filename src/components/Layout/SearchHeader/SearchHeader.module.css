@@ -1,0 +1,89 @@
+/*Jpop*/
+
+.jpop-button {
+    width: 3rem;
+    background: rgb(188, 147, 228);
+    background: linear-gradient(
+      0deg,
+      rgba(141, 70, 227, 1) 35%,
+      rgba(188, 147, 228, 1) 100%
+    );
+  }
+  
+  .jpop-button:hover,
+  .jpop-button:active {
+    background: rgb(188, 147, 228);
+    background: linear-gradient(
+      0deg,
+      rgba(188, 147, 228, 1) 35%,
+      rgba(141, 70, 227, 1) 100%
+    );
+  }
+
+  /*Kpop*/
+.kpop-button {
+    width: 3rem;
+    background: rgb(50, 200, 214);
+      background: linear-gradient(
+        0deg,
+        rgba(0, 140, 153, 1) 35%,
+        rgba(50, 200, 214, 1) 100%
+      );
+    }
+    
+    .kpop-button:hover,
+    .kpop-button:active {
+      background: linear-gradient(
+        0deg,
+        rgba(50, 200, 214, 1) 35%,
+        rgba(0, 140, 153, 1) 100%
+      );
+    }
+
+/*Opening*/
+.opening-button {
+    width: 3rem;
+    background: rgb(248, 101, 157);
+    background: linear-gradient(
+      0deg,
+      rgba(242, 5, 96, 1) 35%,
+      rgba(248, 101, 157, 1) 100%
+    );
+  }
+    
+.opening-button:hover,
+.opening-button:active {
+  background: rgb(248, 101, 157);
+  background: linear-gradient(
+    0deg,
+    rgba(248, 101, 157, 1) 35%,
+    rgba(242, 5, 96, 1) 100%
+  );
+}
+
+/*videogames*/
+.videogames-button {
+    width: 3rem;
+    background: rgb(145, 233, 48);
+    background: linear-gradient(
+      0deg,
+      rgba(119, 185, 45, 1) 35%,
+      rgba(145, 233, 48, 1) 100%
+    );
+}
+    
+.videogames-button:hover,
+.videogames-button:active {
+  background: rgb(145, 233, 48);
+  background: linear-gradient(
+    0deg,
+    rgba(145, 233, 48, 1) 35%,
+    rgba(119, 185, 45,1) 100%
+  );
+}
+    
+.grow-button {
+  padding:0;
+  align-items: center;
+  width: 12rem;
+}
