@@ -32,28 +32,28 @@
   background-image: url('./../../../assets/img/colorful.jpg');
   background-size: 5rem auto;
   background-repeat: repeat;
-  border : var(--border-user);
+  border : var(--border);
 }
 
 .nekoBtn{
     background-image: url('./../../../assets/img/neko.jpg');
     background-size: 5rem auto;
     background-repeat: repeat;
-    border : var(--border-user);
+    border : var(--border);
 }
 
 .lightBtn{
   background-image: url('./../../../assets/img/ranitas.jpg');
   background-size: 5rem auto;
   background-repeat: repeat;
-  border : var(--border-user);
+  border : var(--border);
 }
 
 .darkBtn{
   background-image: url('./../../../assets/img/dark.jpg');
   background-size: 5rem auto;
   background-repeat: repeat;
-  border : var(--border-user);
+  border : var(--border);
 }
 /* Slide Menu */
 .theme-menu {
