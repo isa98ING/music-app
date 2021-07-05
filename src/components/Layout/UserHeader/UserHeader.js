@@ -11,7 +11,7 @@ const UserHeader = () => {
   const [open, setOpen] = useState(false);
   const [openModal, setOpenModal] = useState(false);
 
-  const showInfoModal = () => {
+  const modalHandler = () => {
     (openModal) ? setOpenModal(false) : setOpenModal(true);
   };
   const openMenuHandler = () => {
@@ -22,8 +22,8 @@ const UserHeader = () => {
   return (
     <React.Fragment>
       <div className={classes['help-menu']}>
-        <Button className={`${classes["help-button"]} ${classes['help-button-color']}`} onFetch={showInfoModal} />
-        {openModal && <ModalInfo></ModalInfo>}
+        <Button className={`${classes["help-button"]} ${classes['help-button-color']}`} onFetch={modalHandler} />
+        {openModal && <ModalInfo onClose={modalHandler}></ModalInfo>}
         <Button className={`${classes["help-button"]} ${classes['help-button-color']}`} onFetch={openMenuHandler} />
       </div>
 

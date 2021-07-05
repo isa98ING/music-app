@@ -5,8 +5,8 @@
   top: 20vh;
   left: 20%;
   width: 60%;
+  height: 45vh;
   padding: 1rem;
-  border-radius: 14px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
   z-index: 30;
   animation: slide-down 300ms ease-out forwards;
@@ -19,16 +19,19 @@
   margin: 2rem;
   line-height: 25px;
   font-size: .8rem;
+  margin-bottom: 4rem;
 }
 
 .button {
+  position: absolute;
+  right: 40px;
+  bottom: 30px;
   font: inherit;
   cursor: pointer;
-  background-color: transparent;
+  background-color: white;
   border: 1px solid #b81257;
   padding: 0.2rem 2rem;
   border-radius: 25px;
-  margin-left: 1rem;
   font-size: .8rem;
 }
 

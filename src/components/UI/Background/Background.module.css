@@ -1,0 +1,30 @@
+.background{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+}
+
+.colorful{
+    background-image: url('./../../../assets/img/colorful.jpg');
+    background-repeat: repeat;
+    background-size: 20rem auto;
+}
+
+.neko{
+    background-image: url('./../../../assets/img/neko.jpg');
+    background-repeat: repeat;
+    background-size: 15rem auto;
+}
+
+.light{
+    background-image: url('./../../../assets/img/ranitas.jpg');
+    background-repeat: repeat;
+    background-size: 25rem auto;
+}
+.dark{
+    background-image: url('./../../../assets/img/dark.jpg');
+    background-repeat: repeat;
+    background-size: 15rem auto;
+}
