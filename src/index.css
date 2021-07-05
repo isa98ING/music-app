@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Lemonada&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quantico&display=swap');
 
 * {
   box-sizing: border-box;
@@ -15,14 +16,17 @@ body {
 :root{
   --border: 2px solid white;
   --border-radius: 12px;
-  --background-image:url('./assets/img/colorful.jpg');
-  --kpop-color-light:rgba(50, 200, 214, 1);
+  --kpop-color-light:rgb(46, 175, 187);
   --kpop-color-dark:rgba(0, 140, 153, 1);
   --opening-color-light:rgba(248, 101, 157, 1);
   --opening-color-dark:rgba(242, 5, 96, 1);
   --jpop-color-dark:rgba(141, 70, 227, 1);
-  --jpop-color-light:rgba(188, 147, 228, 1);
-  --videogames-color-light:rgba(145, 233, 48, 1);
-  --videogames-color-dark: rgba(119, 185, 45, 1);
+  --jpop-color-light:rgb(179, 128, 230);
+  --videogames-color-light:rgb(136, 218, 49);
+  --videogames-color-dark: rgb(111, 172, 41);
+  --userheader-color-light:rgba(246, 209, 12, 1);
+  --userHeader-color-dark:rgba(252, 166, 5, 1);
+  --header-border: 2px solid #E7D2F2;
+  --border-user: 2px solid white;
 }
 

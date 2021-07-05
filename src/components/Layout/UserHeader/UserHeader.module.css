@@ -3,30 +3,62 @@
   display: flex;
   position: relative;
 }
+
 /*Help Button*/
 .help-button {
   display: block;
   width: 3rem;
-  background: rgb(246, 209, 12);
+}
+
+/*Help Button Color*/
+.help-button-color{
+  background: var(--userheader-color-light);
   background: linear-gradient(
     0deg,
-    rgba(252, 166, 5, 1) 35%,
-    rgba(246, 209, 12, 1) 100%
+    var(--userHeader-color-dark) 35%,
+    var(--userheader-color-light) 100%
   );
 }
-.help-button:hover,
-.help-button:active {
-  background: rgb(156, 240, 62);
+
+.help-button-color:hover,
+.help-button-color:active {
   background: linear-gradient(
     0deg,
-    rgba(246, 209, 12, 1) 35%,
-    rgba(252, 166, 5, 1) 100%
+    var(--userheader-color-light) 35%,
+    var(--userHeader-color-dark) 100%
   );
+}
+.colorfulBtn{
+  background-image: url('./../../../assets/img/colorful.jpg');
+  background-size: 5rem auto;
+  background-repeat: repeat;
+  border : var(--border-user);
+}
+
+.nekoBtn{
+    background-image: url('./../../../assets/img/neko.jpg');
+    background-size: 5rem auto;
+    background-repeat: repeat;
+    border : var(--border-user);
+}
+
+.lightBtn{
+  background-image: url('./../../../assets/img/ranitas.jpg');
+  background-size: 5rem auto;
+  background-repeat: repeat;
+  border : var(--border-user);
+}
+
+.darkBtn{
+  background-image: url('./../../../assets/img/dark.jpg');
+  background-size: 5rem auto;
+  background-repeat: repeat;
+  border : var(--border-user);
 }
 /* Slide Menu */
 .theme-menu {
   position: absolute;
-  top: 4rem;
+  top: 4.2rem;
   right: 6rem;
   display: flex;
   flex-direction: column;

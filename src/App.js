@@ -1,9 +1,8 @@
 import React, { useState } from "react";
-import classes from './App.module.css';
-
 import Header from "./components/Layout/Header";
 import MusicList from "./components/Music/MusicList";
 import Modal from "./components/UI/Modal/Modal";
+import Background from './components/UI/Background/Background';
 import { api_Music, authorization } from "./api-calls";
 
 function App() {
@@ -77,14 +76,14 @@ function App() {
     setShowModal(false);
   };
 
-  return (
-    <div className = {classes.background} >
+  return (<Background>
       <Header onGenre={genreHandler} />
       <section>
         {!error && <MusicList music={music} genre={genre} />}
         {showModal && <Modal onClose={hideModalHandler}>{error}</Modal>}
       </section>
-    </div>
+    </Background>
+
   );
 }
 

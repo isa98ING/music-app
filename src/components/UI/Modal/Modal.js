@@ -1,11 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import Backdrop from "./Backdrop";
 
 import classes from "./Modal.module.css";
 
-const Backdrop = (props) => {
-  return <div className={classes.backdrop} onClick={props.onClose} />;
-};
 
 const ModalOverlay = (props) => {
   return (
@@ -13,7 +11,7 @@ const ModalOverlay = (props) => {
       <div className={classes.content}>
         <h2>Ups! There is a problem...</h2>
         {props.children}
-        </div>
+      </div>
       <button
         type={props.type || "button"}
         className={classes.button}
@@ -22,9 +20,11 @@ const ModalOverlay = (props) => {
     </div>
   );
 };
+
+
 const portalElement = document.getElementById("overlays");
 
-const Modal = (props) => {
+export const Modal = (props) => {
   return (
     <React.Fragment>
       {ReactDOM.createPortal(
@@ -38,4 +38,5 @@ const Modal = (props) => {
     </React.Fragment>
   );
 };
+
 export default Modal;

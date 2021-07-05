@@ -9,8 +9,7 @@ const Card = (props) => {
   const [isOpenings, setIsOpenings] = useState(false);
   const [isVideogames, setIsVideogames] = useState(false);
 
-  let cardClasses = `${classes.card}  ${
-    cardClicked ? classes["card-opened"] : ""}
+  let cardClasses = `${classes.card}  ${cardClicked ? classes["card-opened"] : ""}
     ${isJpop ? classes.isJpop : ""}
     ${isKpop ? classes.isKpop : ""}
     ${isOpenings ? classes.isOpenings : ""}
@@ -23,28 +22,13 @@ const Card = (props) => {
     ${isOpenings ? classes.isInnerOpenings : ""}
     ${isVideogames ? classes.isInnerVideogames : ""}`
 
-  useEffect(()=>{
-    if(props.genre === 'jpop'){
-      setIsJpop(true);
-    }else{
-      setIsJpop(false)
-    }
-    if(props.genre === 'kpop'){
-      setIsKpop(true);
-    }else{
-      setIsKpop(false);
-    }
-    if(props.genre === 'openings'){
-      setIsOpenings(true);
-    }else{
-      setIsOpenings(false);
-    }if(props.genre === 'videogames'){
-      setIsVideogames(true);
-    }else{
-      setIsVideogames(false);
-    }
+  useEffect(() => {
+    (props.genre === 'jpop') ? setIsJpop(true) : setIsJpop(false);
+    (props.genre === 'kpop') ? setIsKpop(true) : setIsKpop(false);
+    (props.genre === 'openings') ? setIsOpenings(true) : setIsOpenings(false);
+    (props.genre === 'videogames') ? setIsVideogames(true) : setIsVideogames(false);
 
-  },[props.genre])
+  }, [props.genre])
 
   const openCardHandler = (event) => {
     event.preventDefault();
