@@ -3,6 +3,8 @@
 This app was created to practice with the Spotify API and try to implement theme handling using React hooks.
 The purpose was to create different buttons with a genre each and show some popular songs there.
 
+**Netlify** : You can access this page here! [Music App](https://isasmusicapp.netlify.app/)
+
 ## Tools
 
 - **React** 
