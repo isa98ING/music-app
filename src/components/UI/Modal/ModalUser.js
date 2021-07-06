@@ -15,7 +15,7 @@ const InfoModalOverlay = (props) => {
                     {/* About*/}
                     <div className={classes.about}>
                         <h2>About</h2>
-                        <p>The web has been created using React.<br/> It was made with the aim of practicing theme handling and the Spotify API.</p>
+                        <p>The web has been created using React.<br/> It was made to practice theme handling and the Spotify API.</p>
                     </div>
                     {/* Reach Out*/}
                     <div className={classes.reachout}>
